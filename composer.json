@@ -1,5 +1,7 @@
 {
     "name": "hexlet/code",
+    "description": "Hexlet project Brain Games",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -11,5 +13,8 @@
             "email": "ekaterinakarpova2610@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+      "bin/brain-games"
+    ]
 }
