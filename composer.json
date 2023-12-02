@@ -3,6 +3,9 @@
     "description": "Hexlet project Brain Games",
     "license": "proprietary",
     "autoload": {
+        "files": [ 
+            "src/Cli.php"
+                 ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         }
@@ -13,7 +16,9 @@
             "email": "ekaterinakarpova2610@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.21"
+    },
     "bin": [
       "bin/brain-games"
     ]
