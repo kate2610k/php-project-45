@@ -21,4 +21,3 @@ function playEven()
     }
     start($challenge, $question, $answer);
 }
-
