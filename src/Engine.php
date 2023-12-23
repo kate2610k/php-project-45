@@ -5,7 +5,7 @@ namespace Php\Project\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function start($challenge, $questionAll, $answerAll)
+function start(string $challenge, array $questionAll, array $answerAll)
 {
     $count = 0;
     $rounds = 3;

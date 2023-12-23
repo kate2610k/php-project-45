@@ -15,8 +15,9 @@ function playGcd()
     for ($i = 1; $i <= $numberOfRounds; $i += 1) {
         $number1 = rand($minValue, $maxValue);
         $number2 = rand($minValue, $maxValue);
+        $ans = 1;
         $question[] = "{$number1} {$number2}";
-        for ($j = 1; $j <= min($number1, $number2); $j += 1) {
+        for ($j = 2; $j <= min($number1, $number2); $j += 1) {
             if ($number1 % $j === 0 && $number2 % $j === 0) {
                 $ans = $j;
             }

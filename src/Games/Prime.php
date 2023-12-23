@@ -23,7 +23,7 @@ function playPrime()
     }
     start($challenge, $question, $answer);
 }
-function isPrimeNumber($num)
+function isPrimeNumber(int $num)
 {
     if ($num >= 4) {
         for ($i = 2; $i <= sqrt($num); $i += 1) {
