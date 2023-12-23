@@ -8,13 +8,13 @@ use function cli\prompt;
 function start($challenge, $questionAll, $answerAll)
 {
     $count = 0;
-    $numberOfRounds = 3;
+    $rounds = 3;
     line('Welcome to the Brain Games!');
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
     line($challenge);
-    while ($count <= $numberOfRounds) {
-        if ($count === $numberOfRounds) {
+    while ($count <= $rounds) {
+        if ($count === $rounds) {
             line("Congratulations, %s!", $name);
             break;
         }
