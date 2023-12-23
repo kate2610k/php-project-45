@@ -6,14 +6,18 @@ use function Php\Project\Engine\start;
 
 function playPrime()
 {
+    $numberOfRounds = 3;
+    $minNumber = -18;
+    $maxNumber = 50;
+
     $challenge = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $answer = [];
     $question = [];
 
-    for ($i = 1; $i <= 3; $i += 1) {
-        $number = rand(-18, 50);
-        $question[] = $number;
+    for ($i = 1; $i <= $numberOfRounds; $i += 1) {
+        $number = rand($minNumber, $maxNumber);
 
+        $question[] = $number;
         if (isPrimeNumber($number)) {
             $answer[] = 'yes';
         } else {
