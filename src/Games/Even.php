@@ -1,25 +1,22 @@
 <?php
 
-namespace Php\Project\Games\Even;
+namespace PhpProject\Games\Even;
 
-use function Php\Project\Engine\start;
+use function PhpProject\Engine\start;
+
+use const PhpProject\Engine\ROUNDS;
 
 function playEven()
 {
-    $numberOfRounds = 3;
     $minValue = 0;
     $maxValue = 100;
     $challenge = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $answer = [];
-    $question = [];
-    for ($i = 1; $i <= $numberOfRounds; $i += 1) {
+    $answers = [];
+    $questions = [];
+    for ($i = 1; $i <= ROUNDS; $i += 1) {
         $number = rand($minValue, $maxValue);
-        $question[] = $number;
-        if ($number % 2 == 0) {
-            $answer[] = 'yes';
-        } else {
-            $answer[] = 'no';
-        }
+        $questions[] = $number;
+        $answers[] = $number % 2 === 0 ? 'yes' : 'no';
     }
-    start($challenge, $question, $answer);
+    start($challenge, $questions, $answers);
 }

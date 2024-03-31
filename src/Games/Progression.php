@@ -1,12 +1,13 @@
 <?php
 
-namespace Php\Project\Games\Progression;
+namespace PhpProject\Games\Progression;
 
-use function Php\Project\Engine\start;
+use function PhpProject\Engine\start;
+
+use const PhpProject\Engine\ROUNDS;
 
 function playProgression()
 {
-    $numberOfRounds = 3;
     $minLength = 5;
     $maxLength = 10;
     $minFirstValue = 1;
@@ -15,17 +16,17 @@ function playProgression()
     $maxStep = 15;
     $edgePosition = 2;
     $challenge = 'What number is missing in the progression?';
-    $answer = [];
-    $question = [];
-    for ($i = 1; $i <= $numberOfRounds; $i += 1) {
+    $answers = [];
+    $questions = [];
+    for ($i = 1; $i <= ROUNDS; $i += 1) {
         $length = rand($minLength, $maxLength);
         $start = rand($minFirstValue, $maxFirstValue);
         $step = rand($minStep, $maxStep);
         $progression = range($start, $start + ($length - 1) * $step, $step);
         $pos = rand($edgePosition, $length - 1 - $edgePosition);
-        $answer[] = $progression[$pos];
+        $answers[] = $progression[$pos];
         $progression[$pos] = '..';
-        $question[] = implode(' ', $progression);
+        $questions[] = implode(' ', $progression);
     }
-    start($challenge, $question, $answer);
+    start($challenge, $questions, $answers);
 }

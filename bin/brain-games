@@ -12,8 +12,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-use function Php\Project\Cli\greeting;
-
-echo "php bin/brain-games.php\nWelcome to the Brain Games!\n";
+use function PhpProject\Cli\greeting;
 
 greeting();

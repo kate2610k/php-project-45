@@ -1,28 +1,30 @@
 <?php
 
-namespace Php\Project\Games\Prime;
+namespace PhpProject\Games\Prime;
 
-use function Php\Project\Engine\start;
+use function PhpProject\Engine\start;
+
+use const PhpProject\Engine\ROUNDS;
 
 function playPrime()
 {
-    $numberOfRounds = 3;
     $minNumber = -18;
     $maxNumber = 50;
     $challenge = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $answer = [];
-    $question = [];
-    for ($i = 1; $i <= $numberOfRounds; $i += 1) {
+    $answers = [];
+    $questions = [];
+    for ($i = 1; $i <= ROUNDS; $i += 1) {
         $number = rand($minNumber, $maxNumber);
-        $question[] = $number;
+        $questions[] = $number;
         if (isPrimeNumber($number)) {
-            $answer[] = 'yes';
+            $answers[] = 'yes';
         } else {
-            $answer[] = 'no';
+            $answers[] = 'no';
         }
     }
-    start($challenge, $question, $answer);
+    start($challenge, $questions, $answers);
 }
+
 function isPrimeNumber(int $num)
 {
     if ($num >= 4) {

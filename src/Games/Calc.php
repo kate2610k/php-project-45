@@ -1,30 +1,29 @@
 <?php
 
-namespace Php\Project\Games\Calc;
+namespace PhpProject\Games\Calc;
 
-use function Php\Project\Engine\start;
+use function PhpProject\Engine\start;
+
+use const PhpProject\Engine\ROUNDS;
 
 function playCalc()
 {
-    $numberOfRounds = 3;
     $minValue = 0;
     $maxValue = 10;
+    $signs = ['+', '-', '*'];
     $challenge = 'What is the result of the expression?';
-    $answer = [];
-    $question = [];
-    for ($i = 1; $i <= $numberOfRounds; $i += 1) {
-        $numberSign = rand(0, 2);
-        $signs = array('+', '-', '*');
+    $answers = [];
+    $questions = [];
+    for ($i = 1; $i <= ROUNDS; $i += 1) {
+        $numberSign = rand(0, count($signs)-1);
         $number1 = rand($minValue, $maxValue);
         $number2 = rand($minValue, $maxValue);
-        $question[] = "{$number1} {$signs[$numberSign]} {$number2}";
-        if ($signs[$numberSign] === '+') {
-            $answer[] = $number1 + $number2;
-        } elseif ($signs[$numberSign] === '-') {
-            $answer[] = $number1 - $number2;
-        } else {
-            $answer[] = $number1 * $number2;
-        }
+        $questions[] = "{$number1} {$signs[$numberSign]} {$number2}";
+        $answers[] = match($signs[$numberSign]) {
+            '+' => $number1 + $number2,
+            '-' => $number1 - $number2,
+            '*' => $number1 * $number2,
+        };
     }
-    start($challenge, $question, $answer);
+    start($challenge, $questions, $answers);
 }
