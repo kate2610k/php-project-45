@@ -13,7 +13,8 @@ function start(string $challenge, array $questions, array $answers)
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
     line($challenge);
-    for ($count = 0; $count < ROUNDS; $count += 1) {
+    $count = 0;
+    for ($count; $count < ROUNDS; $count += 1) {
         line("Question: {$questions[$count]}");
         $answer = prompt("Your answer");
         if ($answer == $answers[$count]) {

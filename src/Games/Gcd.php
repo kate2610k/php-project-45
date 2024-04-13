@@ -22,7 +22,7 @@ function playGcd()
     start($challenge, $questions, $answers);
 }
 
-function findGcd($number1, $number2)
+function findGcd(int $number1, int $number2)
 {
     $ans = 1;
     for ($j = 2; $j <= min($number1, $number2); $j += 1) {
