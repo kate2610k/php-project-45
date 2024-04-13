@@ -15,11 +15,11 @@ function playCalc()
     $answers = [];
     $questions = [];
     for ($i = 1; $i <= ROUNDS; $i += 1) {
-        $numberSign = rand(0, count($signs)-1);
+        $numberSign = rand(0, count($signs) - 1);
         $number1 = rand($minValue, $maxValue);
         $number2 = rand($minValue, $maxValue);
         $questions[] = "{$number1} {$signs[$numberSign]} {$number2}";
-        $answers[] = match($signs[$numberSign]) {
+        $answers[] = match ($signs[$numberSign]) {
             '+' => $number1 + $number2,
             '-' => $number1 - $number2,
             '*' => $number1 * $number2,

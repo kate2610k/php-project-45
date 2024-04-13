@@ -9,7 +9,6 @@ const ROUNDS = 3;
 
 function start(string $challenge, array $questions, array $answers)
 {
-//    const ROUNDS = 3;
     line('Welcome to the Brain Games!');
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
@@ -28,5 +27,4 @@ function start(string $challenge, array $questions, array $answers)
     if ($count === ROUNDS) {
         line("Congratulations, %s!", $name);
     }
-
 }
