@@ -16,9 +16,9 @@ The player must determine the number that is missing in the arithmetic progressi
 - Brain-prime.
 The player must answer 'yes' if the number is prime, and 'no' if it is not.
 ## Setup
-   git clone https://github.com/kate2610k/php-project-45.git
+   $ git clone https://github.com/kate2610k/php-project-45.git
 
-   cd php-package-45
+   $ cd php-package-45
 
    make install
 
@@ -27,13 +27,18 @@ Installing dependencies:
 [![asciicast](https://asciinema.org/a/HrQusmpkuI003USss39y2b230.svg)](https://asciinema.org/a/HrQusmpkuI003USss39y2b230)
 
 Launching games:
+
 make brain-even
 [![asciicast](https://asciinema.org/a/ICwxmZQwwIwfmNUUbNzPhhOZC.svg)](https://asciinema.org/a/ICwxmZQwwIwfmNUUbNzPhhOZC)
+
 make brain-calc
 [![asciicast](https://asciinema.org/a/Jup21yK2ajam3waY2fFDc7atM.svg)](https://asciinema.org/a/Jup21yK2ajam3waY2fFDc7atM)
+
 make brain-gcd
 [![asciicast](https://asciinema.org/a/FSTxKpAncTfG8r4F5Iyn5QWKk.svg)](https://asciinema.org/a/FSTxKpAncTfG8r4F5Iyn5QWKk)
+
 make brain-progression
 [![asciicast](https://asciinema.org/a/jfBlp9GqTojdQ0yTvZxLJhSbC.svg)](https://asciinema.org/a/jfBlp9GqTojdQ0yTvZxLJhSbC)
+
 make brain-prime
 [![asciicast](https://asciinema.org/a/7m6d0YPtMFnhx83WDAD5Q6hxf.svg)](https://asciinema.org/a/7m6d0YPtMFnhx83WDAD5Q6hxf)
