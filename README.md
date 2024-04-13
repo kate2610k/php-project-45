@@ -16,11 +16,11 @@ The player must determine the number that is missing in the arithmetic progressi
 - Brain-prime.
 The player must answer 'yes' if the number is prime, and 'no' if it is not.
 ## Setup
-   $ git clone https://github.com/kate2610k/php-project-45.git
+	git clone https://github.com/kate2610k/php-project-45.git
 
-   $ cd php-package-45
+	cd php-package-45
 
-   make install
+	make install
 
 ## Start playing
 Installing dependencies:
