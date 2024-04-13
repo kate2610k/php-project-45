@@ -1,8 +1,23 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kate2610k/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kate2610k/php-project-45/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9f1ad25c3ca636f85337/maintainability)](https://codeclimate.com/github/kate2610k/php-project-45/maintainability)
-[![asciicast](https://asciinema.org/a/oLmC3qMFpN11Zudfhcm0hCfvB.svg)](https://asciinema.org/a/oLmC3qMFpN11Zudfhcm0hCfvB)
-[![asciicast](https://asciinema.org/a/C8QgzXB6FSDOZD5vS2Rdpr7UF.svg)](https://asciinema.org/a/C8QgzXB6FSDOZD5vS2Rdpr7UF)
-[![asciicast](https://asciinema.org/a/BdheOMDpd6rRYgqUU67j6btmJ.svg)](https://asciinema.org/a/BdheOMDpd6rRYgqUU67j6btmJ)
-[![asciicast](https://asciinema.org/a/6oWbJlxh8PdzlmQIeDuFdXA4B.svg)](https://asciinema.org/a/6oWbJlxh8PdzlmQIeDuFdXA4B)
-[![asciicast](https://asciinema.org/a/YCvurMwDzhiSq8KnNyf3IRQBg.svg)](https://asciinema.org/a/YCvurMwDzhiSq8KnNyf3IRQBg)
+
+##Description
+The project features five mini-games. 
+Games can be launched from the console.
+- Brain-even
+The user is shown a random number. And he needs to answer 'yes' if the number is even, or 'no' if it’s odd.
+- Brain-calc
+The user is shown a random mathematical expression that needs to be calculated and the correct answer written down.
+- Brain-gcd
+The user is shown two random numbers. The user must calculate and enter the greatest common divisor of these numbers.
+- Brain-progression
+The player must determine the number that is missing in the arithmetic progression.
+- Brain-prime
+The player must answer 'yes' if the number is prime, and 'no' if it is not.
+## Setup
+git clone https://github.com/kate2610k/php-project-45.git
+cd php-package-45
+make install
+
+##Start playing
