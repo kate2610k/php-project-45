@@ -24,11 +24,11 @@ function play()
 
 function findGcd(int $number1, int $number2)
 {
-    $ans = 1;
+    $answer = 1;
     for ($j = 2; $j <= min($number1, $number2); $j += 1) {
         if ($number1 % $j === 0 && $number2 % $j === 0) {
-            $ans = $j;
+            $answer = $j;
         }
     }
-    return $ans;
+    return $answer;
 }

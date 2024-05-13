@@ -20,11 +20,9 @@ function start(string $challenge, array $questions, array $answers)
         if ($answer != $answers[$count]) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$answers[$count]}'.");
             line("Let's try again, %s!", $name);
-            break;
+            return;
         }
         line('Correct!');
     }
-    if ($count === ROUNDS) {
-        line("Congratulations, %s!", $name);
-    }
+    line("Congratulations, %s!", $name);
 }

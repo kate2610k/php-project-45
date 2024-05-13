@@ -23,13 +23,13 @@ function play()
 
 function isPrimeNumber(int $num)
 {
-    if ($num >= 2) {
-        for ($i = 2; $i <= sqrt($num); $i += 1) {
-            if ($num % $i === 0) {
-                return false;
-            }
-        }
-        return true;
+    if ($num < 2) {
+        return false;
     }
-    return false;
+    for ($i = 2; $i <= sqrt($num); $i += 1) {
+        if ($num % $i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
