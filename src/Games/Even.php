@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProject\Games\Even;
+namespace BrainGames\Games\Even;
 
-use function PhpProject\Engine\start;
+use function BrainGames\Engine\start;
 
-use const PhpProject\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS;
 
-function playEven()
+function play()
 {
     $minValue = 0;
     $maxValue = 100;

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpProject\Engine;
+namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
@@ -17,13 +17,12 @@ function start(string $challenge, array $questions, array $answers)
     for ($count; $count < ROUNDS; $count += 1) {
         line("Question: {$questions[$count]}");
         $answer = prompt("Your answer");
-        if ($answer == $answers[$count]) {
-            line('Correct!');
-        } else {
+        if ($answer != $answers[$count]) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$answers[$count]}'.");
             line("Let's try again, %s!", $name);
             break;
         }
+        line('Correct!');
     }
     if ($count === ROUNDS) {
         line("Congratulations, %s!", $name);

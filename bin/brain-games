@@ -12,6 +12,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 
-use function PhpProject\Cli\greeting;
+use function BrainGames\Cli\greeting;
 
 greeting();

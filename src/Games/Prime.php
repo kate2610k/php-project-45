@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProject\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use function PhpProject\Engine\start;
+use function BrainGames\Engine\start;
 
-use const PhpProject\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS;
 
-function playPrime()
+function play()
 {
     $minNumber = -18;
     $maxNumber = 50;
@@ -16,27 +16,20 @@ function playPrime()
     for ($i = 1; $i <= ROUNDS; $i += 1) {
         $number = rand($minNumber, $maxNumber);
         $questions[] = $number;
-        if (isPrimeNumber($number)) {
-            $answers[] = 'yes';
-        } else {
-            $answers[] = 'no';
-        }
+        $answers[] = isPrimeNumber($number) ? 'yes' : 'no';
     }
     start($challenge, $questions, $answers);
 }
 
 function isPrimeNumber(int $num)
 {
-    if ($num >= 4) {
+    if ($num >= 2) {
         for ($i = 2; $i <= sqrt($num); $i += 1) {
             if ($num % $i === 0) {
                 return false;
             }
         }
         return true;
-    } elseif ($num === 2 || $num === 3) {
-        return true;
-    } else {
-        return false;
     }
+    return false;
 }

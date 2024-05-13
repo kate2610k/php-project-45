@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProject\Games\Gcd;
+namespace BrainGames\Games\Gcd;
 
-use function PhpProject\Engine\start;
+use function BrainGames\Engine\start;
 
-use const PhpProject\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS;
 
-function playGcd()
+function play()
 {
     $minValue = 1;
     $maxValue = 100;

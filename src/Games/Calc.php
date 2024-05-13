@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProject\Games\Calc;
+namespace BrainGames\Games\Calc;
 
-use function PhpProject\Engine\start;
+use function BrainGames\Engine\start;
 
-use const PhpProject\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS;
 
-function playCalc()
+function play()
 {
     $minValue = 0;
     $maxValue = 10;

@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpProject\Games\Progression;
+namespace BrainGames\Games\Progression;
 
-use function PhpProject\Engine\start;
+use function BrainGames\Engine\start;
 
-use const PhpProject\Engine\ROUNDS;
+use const BrainGames\Engine\ROUNDS;
 
-function playProgression()
+function play()
 {
     $minLength = 5;
     $maxLength = 10;
@@ -23,9 +23,9 @@ function playProgression()
         $start = rand($minFirstValue, $maxFirstValue);
         $step = rand($minStep, $maxStep);
         $progression = range($start, $start + ($length - 1) * $step, $step);
-        $pos = rand($edgePosition, $length - 1 - $edgePosition);
-        $answers[] = $progression[$pos];
-        $progression[$pos] = '..';
+        $position = rand($edgePosition, $length - 1 - $edgePosition);
+        $answers[] = $progression[$position];
+        $progression[$position] = '..';
         $questions[] = implode(' ', $progression);
     }
     start($challenge, $questions, $answers);
